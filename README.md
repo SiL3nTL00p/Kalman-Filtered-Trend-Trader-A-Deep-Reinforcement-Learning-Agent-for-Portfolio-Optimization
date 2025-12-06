@@ -6,6 +6,8 @@ This repository is part of **WiDS (Winters in Data Science)** conducted by **The
 
 ## Project Overview
 
+aarav edited this thing here
+
 **Problem Statement:**  
 Simple "buy-and-hold" trading strategies often fail during market downturns, while overly reactive models get misled by short-term noise.  
 This project aims to design an **autonomous trading agent** that makes intelligent, long-term portfolio decisions based on the *true underlying market trend* — not just daily volatility.
