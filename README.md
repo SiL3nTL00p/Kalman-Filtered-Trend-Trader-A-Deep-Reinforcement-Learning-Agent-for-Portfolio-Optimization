@@ -6,22 +6,18 @@ This repository is part of **WiDS (Winters in Data Science)** conducted by **The
 
 ## Project Overview
 
-aarav edited this thing here
-
 **Problem Statement:**  
-Simple "buy-and-hold" trading strategies often fail during market downturns, while overly reactive models get misled by short-term noise.  
 This project aims to design an **autonomous trading agent** that makes intelligent, long-term portfolio decisions based on the *true underlying market trend* — not just daily volatility.
 
 **Goal:**  
-Build a Deep Reinforcement Learning (RL) agent that allocates between a **risky asset** (e.g., SPY ETF) and a **stable asset** (cash) to maximize portfolio value over time.
+Build a Deep Reinforcement Learning (RL) agent that allocates between a **risky asset** and a **stable asset** (cash) to maximize portfolio value over time.
 
 **Core Idea:**  
 Instead of feeding noisy prices to the agent, use a **Kalman Filter** to estimate the true price and its trend (velocity).  
 The RL agent learns an optimal policy — when to buy, sell, or hold — from these filtered signals.
 
----
 
-## Key Learning Outcomes
+### Key Learning Outcomes
 
 By completing this project, you will learn:
 
@@ -29,164 +25,75 @@ By completing this project, you will learn:
 - Financial portfolio optimization and backtesting
 - Kalman Filtering and state-space modeling
 - Time-series noise reduction and trend estimation
-- Custom Gym environment creation for trading
-- Training RL agents using **Stable-Baselines3 (PPO, A2C, DDPG)**
+- Training RL agents 
 - Performance evaluation with transaction costs and benchmarks
+
+
+## Evaluation Criteria
+> _"The Simplicity of your explanation is indicative of the depth of you undestanding"_
+
+
+You must have heard people say, if you can teach something then you know it very well. That idea is based on the above statement.
+Throughout the project, we will ask you to explain what you think is going on - **with a Twist!** You wont be allowed to use any  of the technical terms to explain it. Using everyday Layman language, try to tell whats going on.
+
+This one exercise is the only time I ask you **not** to use AI `(~_~;)` 
+
+Everywhere else, use AI as you see fit. Afterwards write a short paragraph explaining:
+- What you did 
+- What problems you encountered
+- How you solved them
+
+and most importantly, **What do you think you learned?** (^o^)
+
+From my side, I hope to show you more than just the numbers at play. Every topic has a perspective behind it, a history of its ideas and I really like to share that. So ill try to tell about the history of Machine Learning and Stock Markets too! (Maybe there will be history questions lol (^m^))
+
+
+There will be 3 assignments and the Final Project.
+- Machine Learning
+- Kalman Filtered Trading
+- Reinforcement Learning
+- The final project encompassing everything
+
+For those who already know Machine Learning or Kalman Filter, you dont need to do the assignment in ernest, just share some thoughts about how you would go about solving the problems, only the framework.
+Please be sure to complete the RL assignment and the Final Project otherwise we wont pass you (ー_ー)!!
 
 ---
 
 ## Weekly Contents
 
-### **Week 1 – Foundations of Financial Data & RL**
-**Goal:** Build intuition for trading and RL basics.  
+### **Week 1 – Foundations of Machine Learning**
+**Goal:** Build a rigorous intuition and mathematical understanding of main machine learning methods— linear regression models, neural network architectures, and deep learning techniques—while actually being able to **implement** and **evaluate** these models on real datasets. 
+
 **Learn:**  
-- Portfolio optimization, returns, and volatility  
-- Python tools: `pandas`, `numpy`, `matplotlib`, `yfinance`  
-- RL basics: state, action, reward, policy  
-- “Buy & Hold” vs “Active” strategies
+- Learn Linear Regression from the absolte basics - The Math! 
+The various techiniques we use and all the technical jargon. 
+- Implement an actual network for a simple task
+- Learn of Deep Neural networks and their power through MNIST Handwritten Dataset.
 
-**Material**
-ML Resources 
-- https://youtu.be/Gv9_4yMHFhI?si=Jp2drn5i9viSmjl8 (gentle Introduction)
-
-- https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi 3b1b Playlist on Neural Networks, the best Intuitive introduction. Watch it to "feel" all this
-
-- Linear Regression - https://www.youtube.com/watch?v=VmbA0pi2cRQ
-
-- Deep Learning with Pytorch Playlist - https://www.youtube.com/playlist?list=PLQVvvaa0QuDdeMyHEYc0gxFpYwHY2Qfdh (Mainly 1 to 4)
-
-- Deep Learning Basics - https://www.youtube.com/watch?v=VyWAvY2CF9c
-
-- PyTorch Basics - https://www.youtube.com/watch?v=c36lUUr864M
-
-
-**Deliverables:**  
-- Download and visualize SPY data  
-- Plot daily & cumulative returns  
-- Write a short note explaining the RL loop  
-
----
 
 ### **Week 2 – Kalman Filter & Trend Estimation**
 **Goal:** Implement a Kalman Filter to extract the true trend from noisy data.  
 **Learn:**  
-- Hidden-state modeling: [price, velocity]  
+- Hidden-state modeling: [price, velocity] 
 - Process vs measurement noise  
 - Implementing Kalman Filter (`numpy` or `filterpy`)  
 - Tuning parameters and visualizing results  
 
-**Material**
-KALMAN FILTER
-- https://youtu.be/IFeCIbljreY?si=O-3gv1U1AM2u_3SP (Introductory)
 
-- https://youtu.be/RxIdLu18SsE?si=EECwQZlIGPRbPZ8a (Quant Specific)
-- https://youtu.be/R63dU5w_djQ?si=r_hohmKSVsv0KDS7(In Depth)
-
-**Deliverables:**  
-- Jupyter Notebook plotting:
-  - Raw vs filtered price  
-  - Estimated velocity (trend)  
-
----
-
-### **Week 3 – Building the Trading Environment**
-**Goal:** Create a custom environment for RL training.  
+### **Week 3 – Learning Reinforcement Learning**
+**Goal:** Build a simple RL agent that can play and improve at a game
 **Learn:**  
-- Gymnasium API structure (`reset`, `step`, `render`)  
-- Define state = [allocation, estimated_price, velocity]  
-- Reward = portfolio gain – transaction cost
-
-**Material**
-RL course:
--https://www.youtube.com/watch?v=4ngb0IZTg8I&list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX (lect 1 to 4)
--https://deeplizard.com/learn/video/nyjbcRQ-uQ8 
-Complementary resource with lots of shit
-
--Small Course explaining Reinforcement Learning https://www.youtube.com/playlist?list=PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv
-
-**Deliverables:**  
-- `portfolio_env.py`  
-- Test with random actions to ensure stability  
-
----
-
-### **Week 4 – Training the RL Agent**
-**Goal:** Train a reinforcement learning agent using real data.  
-**Learn:**  
-- Using `stable-baselines3` (PPO, A2C, or DDPG)  
-- Continuous action spaces  
-- Model saving, loading, and evaluation  
-
-**Deliverables:**  
-- Trained RL model (e.g., `ppo_portfolio_trader.zip`)  
-- Training plots showing portfolio performance  
-
----
-
-### **Week 5 – Backtesting & Performance Evaluation**
-**Goal:** Evaluate on unseen test data.  
-**Learn:**  
-- Backtesting concepts  
-- Metrics: Sharpe ratio, drawdown, cumulative return  
-- Compare against Buy & Hold and SPY benchmark  
-
-**Deliverables:**  
-- “Money Plot” comparing all strategies  
-- Summary of results and performance insights  
-
----
-
-### **Week 6 – Insights, Optimization & Presentation**
-**Goal:** Finalize, analyze, and showcase your work.  
-**Learn:**  
-- Sensitivity to transaction costs and model parameters  
-- Documentation and storytelling for projects  
-- Preparing a professional README and result plots  
-
-**Deliverables:**  
-- Final GitHub repo with:
-  - Money Plot  
-  - Filter visualization  
-  - README.md + short project report  
-
----
-
-## Final Deliverable
-
-A **complete end-to-end system** that integrates:
-[Stock Data] → [Kalman Filter] → [Trend Estimate] → [RL Agent (PPO)] → [Allocation %] → [Portfolio Value]
+- RL basics: state, action, reward, policy
+- Different Learning Strategies
+- How an agent explores and learns overtime
 
 
-**Success Metric:**  
-Your agent’s portfolio curve beats both **Buy & Hold** and **SPY** over unseen test data (2023–2024).
+### **Final Project: RL Trend Trader**
 
----
+A **complete end-to-end beast** that earns money!
 
-## What will you learn while doing this project
+[Stock Data] → [Kalman Filter] → [Trend Estimate] → [RL Agent] → [Allocation %] → [Portfolio Value]
 
-This project blends **machine learning**, **finance**, and **signal processing** into a single hands-on system.  
-You’ll gain the technical and conceptual depth needed for **quantitative trading**, **AI research**, and **data-driven financial modeling** — all while learning to see through noise and act intelligently.
 
----
-
-### Tools & Libraries to be used
-
-- Python (NumPy, Pandas, Matplotlib)
-- `yfinance` for market data
-- `filterpy` or manual Kalman implementation
-- `gymnasium` for custom environment
-- `stable-baselines3` for RL training
-- `scikit-learn` for evaluation and analysis
-
----
-
-### End Goal
-
-By the end of this project, you’ll have a:
-- Trained **Deep RL trading agent**  
-- Functional **Kalman Filter trend estimator**  
-- Fully documented **GitHub project** showcasing a data-driven portfolio optimization pipeline.
-
----
 
 > *“An intelligent trading agent doesn’t just follow prices — it understands the market’s rhythm.”*
