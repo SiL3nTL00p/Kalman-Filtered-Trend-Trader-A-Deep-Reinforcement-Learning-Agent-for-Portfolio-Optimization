@@ -1,4 +1,4 @@
-# Week 1 – Kalman Filtering for Trading
+# Week 2 – Kalman Filtering for Trading
 
 ## Goal  
 The goal of this learning module is to build a solid theoretical and practical foundation in Kalman Filters, with an emphasis on their application to financial time series and trading strategies. Learners will understand how Kalman Filters model noisy observations and estimate latent variables such as fair value, trend, volatility, and dynamic relationships. The module aims to bridge intuition, mathematics, and implementation by enabling participants to confidently apply Kalman Filters in Python. By the end of the module, learners will be able to interpret model outputs, evaluate assumptions, and assess the suitability of Kalman Filter–based methods in real trading environments.
@@ -23,7 +23,8 @@ By the end of the week, you will understand the mathematical foundations of Kalm
 - https://medium.com/@serdarilarslan/implementing-a-kalman-filter-based-trading-strategy-8dec764d738e :Practical guide to building a Kalman Filter-driven trading strategy, focusing on dynamic hedge ratios for pairs trading.
 
 For a deeper understanding of **Kalman filtering in trading**, we recommend the following resources:
-• **Books on Kalman Filtering**:
+
+- **Books on Kalman Filtering**:
 
 - *Kalman Filtering: Theory and Practice Using MATLAB by Mohinder S. Grewal and Angus P. Andrews* (very high level, can skip)
     - Chapter 1: Introduction to Kalman Filtering (pages 1–22)
@@ -37,8 +38,7 @@ For a deeper understanding of **Kalman filtering in trading**, we recommend the 
     - Section 3: Implementation of a Simple Kalman Filter (pages 11–18)
 
 • **Kalman Filtering in Python**: For a practical, hands-on guide to implementing Kalman filters in Python, refer to the following resource:
-
--[Kalman and Bayesian Filters in Python - 1D Kalman Filter](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/04-One-Dimensional-Kalman-Filters.ipynb)
+[Kalman and Bayesian Filters in Python - 1D Kalman Filter](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/04-One-Dimensional-Kalman-Filters.ipynb)
 
 • **Additional Resource**:
 
@@ -48,8 +48,8 @@ For a deeper understanding of **Kalman filtering in trading**, we recommend the 
 
 
 
-### Step 2 - Complete the Assignment
-<<Add info here>>
+### Assignment
+*coming soon*
 
 Ensure that the solutions are detailed. Make sure the report includes the proper solutions, required code and include all relevant plots, explanations and corresponding output. 
 
